@@ -1,0 +1,9 @@
+services:
+  api:
+    build: .
+    image: clientify-api:latest
+    container_name: clientify-api
+    restart: unless-stopped
+    env_file: .env
+    ports:
+      - "127.0.0.1:8080:8080"
